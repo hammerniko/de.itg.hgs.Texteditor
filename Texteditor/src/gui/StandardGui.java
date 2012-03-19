@@ -323,7 +323,7 @@ public class StandardGui extends JFrame implements ActionListener,DocumentListen
 	private JMenuItem getAboutMenuItem(){
 		if(jMenuItemAbout == null){
 			jMenuItemAbout = new JMenuItem();
-			jMenuItemAbout.setText("Über");
+			jMenuItemAbout.setText("\u00DCber");
 			jMenuItemAbout.setFont(new java.awt.Font("Dialog", java.awt.Font.PLAIN, 12));
 			jMenuItemAbout.addActionListener(this);
 		}
@@ -454,7 +454,7 @@ public class StandardGui extends JFrame implements ActionListener,DocumentListen
 	private JMenuItem getJMenuItemOpen(){
 		if(jMenuItemOpen == null){
 			jMenuItemOpen = new JMenuItem();
-			jMenuItemOpen.setText("Öffnen");
+			jMenuItemOpen.setText("\u00F6ffnen");
 			jMenuItemOpen.setIcon(new ImageIcon(getClass().getResource("/icon/fldr_obj.gif")));
 			jMenuItemOpen.setFont(new java.awt.Font("Dialog", java.awt.Font.PLAIN, 12));
 			jMenuItemOpen.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_O,
@@ -733,7 +733,7 @@ public class StandardGui extends JFrame implements ActionListener,DocumentListen
 			jMenuItemSpeichern = new JMenuItem();
 			jMenuItemSpeichern.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_S,
 					Event.CTRL_MASK, true));
-			jMenuItemSpeichern.setIcon(new ImageIcon(getClass().getResource("/icon/save_icon.gif")));
+			jMenuItemSpeichern.setIcon(new ImageIcon(StandardGui.class.getResource("/javax/swing/plaf/metal/icons/ocean/floppy.gif")));
 			jMenuItemSpeichern.setFont(new java.awt.Font("Dialog", java.awt.Font.PLAIN, 12));
 			jMenuItemSpeichern.setText("Speichern");
 			jMenuItemSpeichern.addActionListener(this);
@@ -797,7 +797,7 @@ public class StandardGui extends JFrame implements ActionListener,DocumentListen
 	private JButton getJButtonSave() {
 		if (jButtonSave == null) {
 			jButtonSave = new JButton();
-			jButtonSave.setIcon(new ImageIcon(getClass().getResource("/icon/save_icon.gif")));
+			jButtonSave.setIcon(new ImageIcon(StandardGui.class.getResource("/javax/swing/plaf/metal/icons/ocean/floppy.gif")));
 			jButtonSave.setToolTipText("Datei speichern");
 			jButtonSave.setText("");
 			jButtonSave.addActionListener(this);
@@ -814,7 +814,7 @@ public class StandardGui extends JFrame implements ActionListener,DocumentListen
 		if (jMenuItemZurueck == null) {
 			jMenuItemZurueck = new JMenuItem();
 			jMenuItemZurueck.setIcon(new ImageIcon(getClass().getResource("/icon/icon (4).gif")));
-			jMenuItemZurueck.setText("rueckgängig");
+			jMenuItemZurueck.setText("r\u00FCckg\u00E4ngig");
 			jMenuItemZurueck.setFont(new java.awt.Font("Dialog", java.awt.Font.PLAIN, 12));
 			jMenuItemZurueck.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_Z,
 					Event.CTRL_MASK, true));
