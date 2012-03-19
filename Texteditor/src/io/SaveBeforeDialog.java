@@ -67,7 +67,7 @@ public class SaveBeforeDialog extends javax.swing.JDialog {
         setModal(true);
         setResizable(false);
 
-        labelMessage.setText("Änderungen in "+fileName+" speichern ?");
+        labelMessage.setText("\u00C4nderungen in Unbekannt speichern ?");
 
         buttonNein.setText("Nein");
         buttonNein.addActionListener(new java.awt.event.ActionListener() {

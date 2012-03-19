@@ -472,7 +472,7 @@ public class StandardGui extends JFrame implements ActionListener,DocumentListen
 
 		if(o.equals(jButtonOp) || o.equals(jMenuItemOpen)){
 			trace("open");
-			setStatus("Datei ˆffnen...");
+			setStatus("Datei Öffnen...");
 			dieSteuerung.openFileCO();
 			setStatus("ready");
 
@@ -480,7 +480,7 @@ public class StandardGui extends JFrame implements ActionListener,DocumentListen
 		else if(o.equals(jButtonPaste) || o.equals(jMenuItemPaste)
 				|| o.equals(menuItemPaste)){
 			trace("paste");
-			setStatus("einfuegen...");
+			setStatus("einfügen...");
 			jEditorPane.paste();
 			setStatus("ready");
 		}
@@ -532,7 +532,7 @@ public class StandardGui extends JFrame implements ActionListener,DocumentListen
 		}
 		else if(o.equals(menuItemSelectAll)){
 			trace("alles markieren");
-			setStatus("Alles ausw‰hlen...");
+			setStatus("Alles auswählen...");
 			jEditorPane.selectAll();
 		}
 		else if (o.equals(jButtonVor)||o.equals(jMenuItemVor)) {
@@ -545,7 +545,7 @@ public class StandardGui extends JFrame implements ActionListener,DocumentListen
 		}
 		else if (o.equals(jButtonZurueck)||o.equals(jMenuItemZurueck)) {
 			System.out.println("undo");
-			setStatus("rueckg‰ngig");
+			setStatus("rückgängig");
 			if(undo.canUndo()){
 				undo.undo();
 				
