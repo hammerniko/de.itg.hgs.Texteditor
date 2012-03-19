@@ -45,7 +45,7 @@ public class About extends JDialog {
 	private void initialize() {
 		this.setDefaultCloseOperation(About.DISPOSE_ON_CLOSE);
 		this.setSize(407, 210);
-		this.setTitle("Über...");
+		this.setTitle("Ÿber...");
 		this.setContentPane(getJContentPane());
 		this.setLocationRelativeTo(owner);
 		
