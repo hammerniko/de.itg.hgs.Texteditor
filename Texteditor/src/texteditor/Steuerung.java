@@ -41,13 +41,13 @@ public class Steuerung {
     /**
      * Steuert das "Speichern unter" Verfahren
      */
-    public void saveAsNewFileCO() {
+    public void saveAsNewFile() {
     		currentEditorText = dieGui.getEditorText();
             saveFileFU.setText(currentEditorText);
             saveFileFU.saveAsNewFile(dieGui);
             dieGui.setCurrentFile(saveFileFU.getFile());
             if (saveFileFU.isCancel() == false) {
-                 //
+                 
             }
         //}
     }
@@ -55,21 +55,21 @@ public class Steuerung {
     /**
      * Steuert das "Speichern" Verfahren
      */
-    public void saveFileCO() {
+    public void saveFile() {
         if (dieGui.getCurrentFile() != null) {
             currentEditorText = dieGui.getEditorText();
             saveFileFU.setText(currentEditorText);
             saveFileFU.saveFile(dieGui.getCurrentFile());
             
         } else {
-            saveAsNewFileCO();
+            saveAsNewFile();
         }
     }
 
     /**
      * Steuert das "Datei Öffnen" Verfahren
      */
-    public void openFileCO() {
+    public void openFile() {
         try {
             currentEditorText = openFileFU.readFile(dieGui);
             if (!(currentEditorText.equals("cancel"))) {
@@ -83,7 +83,7 @@ public class Steuerung {
         }
     }
     
-    public void printCo(){
+    public void print(){
     	PrinterJob pjob = PrinterJob.getPrinterJob(); 
     			 
 		if ( pjob.printDialog() == false ) 

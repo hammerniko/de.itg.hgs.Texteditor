@@ -454,7 +454,7 @@ public class StandardGui extends JFrame implements ActionListener,DocumentListen
 	private JMenuItem getJMenuItemOpen(){
 		if(jMenuItemOpen == null){
 			jMenuItemOpen = new JMenuItem();
-			jMenuItemOpen.setText("\u00F6ffnen");
+			jMenuItemOpen.setText("\u00D6ffnen");
 			jMenuItemOpen.setIcon(new ImageIcon(getClass().getResource("/icon/fldr_obj.gif")));
 			jMenuItemOpen.setFont(new java.awt.Font("Dialog", java.awt.Font.PLAIN, 12));
 			jMenuItemOpen.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_O,
@@ -473,7 +473,7 @@ public class StandardGui extends JFrame implements ActionListener,DocumentListen
 		if(o.equals(jButtonOp) || o.equals(jMenuItemOpen)){
 			trace("open");
 			setStatus("Datei …ffnen...");
-			dieSteuerung.openFileCO();
+			dieSteuerung.openFile();
 			setStatus("ready");
 
 		}
@@ -487,7 +487,7 @@ public class StandardGui extends JFrame implements ActionListener,DocumentListen
 		else if(o.equals(jButtonPrint) || e.getSource().equals(jMenuItemDrucken)){
 			trace("print");
 			setStatus("Datei drucken...");
-			dieSteuerung.printCo();
+			dieSteuerung.print();
 			
 		}
 
@@ -508,13 +508,13 @@ public class StandardGui extends JFrame implements ActionListener,DocumentListen
 		else if(o.equals(jMenuItemSave)||o.equals(jButtonSave)){
 			trace("save as");
 			setStatus("Datei speichern unter...");
-			dieSteuerung.saveAsNewFileCO();
+			dieSteuerung.saveAsNewFile();
 			setStatus("ready");
 		}
 		else if(o.equals(jMenuItemSpeichern)){
 			trace("save");
 			setStatus("Datei speichern...");
-			dieSteuerung.saveFileCO();
+			dieSteuerung.saveFile();
 			setStatus("ready");
 		}
 		
