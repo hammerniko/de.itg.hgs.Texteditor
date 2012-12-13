@@ -1,5 +1,4 @@
 Manifest-Version: 1.0
 Sealed: true
-Splashscreen-Image: SplashTexteditor.png
-Main-Class: texteditor.startGui
+Main-Class: Gui
 
