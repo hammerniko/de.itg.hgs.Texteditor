@@ -10,6 +10,7 @@ import javax.swing.JPanel;
 
 public class About extends JDialog {
 
+	private static final String INFO = "Info...";
 	/**
 	 * 
 	 */
@@ -20,16 +21,14 @@ public class About extends JDialog {
 	
 	public About() {
 		super();
-		// TODO Automatisch erstellter Konstruktoren-Stub
 		initialize();
 		
 	}
 
 	
 	
-	public About(Frame owner) {
+	public About(JFrame owner) {
 		super(owner);
-		// TODO Automatisch erstellter Konstruktoren-Stub
 		initialize();
 		this.setModal(true);
 		
@@ -45,7 +44,7 @@ public class About extends JDialog {
 	private void initialize() {
 		this.setDefaultCloseOperation(About.DISPOSE_ON_CLOSE);
 		this.setSize(407, 210);
-		this.setTitle("Ÿber...");
+		this.setTitle(INFO);
 		this.setContentPane(getJContentPane());
 		this.setLocationRelativeTo(owner);
 		
