@@ -45,7 +45,7 @@ public class OpenFile {
         fileReader=null;
         bufferedReader=null;
             
-        openDialog.setDialogTitle("Datei šffnen");
+        openDialog.setDialogTitle("Datei oeffnen");
         openDialog.addChoosableFileFilter(fileNameFilter);
         openDialog.setFileFilter(fileNameFilter);
         openDialog.setAcceptAllFileFilterUsed(true);
