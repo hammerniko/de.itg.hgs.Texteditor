@@ -40,10 +40,11 @@ import texteditor.Steuerung;
 /**
  * * *
  * 
- * @author Nico Standard Applikation mir ActionListenern
+ * @author Nico Standard Applikation mit ActionListenern
  */
 public class StandardGui extends JFrame implements ActionListener,DocumentListener{
 
+	private static final int UNDO_LIMIT = 100;
 	private static final long	serialVersionUID	= -101370178615826787L;
 	// Objeke
 	private Document doc;
@@ -109,7 +110,7 @@ public class StandardGui extends JFrame implements ActionListener,DocumentListen
 		dieSteuerung = new Steuerung(this);
 		debug = true;
 		undo = new UndoManager();
-		undo.setLimit(100);
+		undo.setLimit(UNDO_LIMIT);
 
 	}
 
@@ -733,7 +734,9 @@ public class StandardGui extends JFrame implements ActionListener,DocumentListen
 			jMenuItemSpeichern = new JMenuItem();
 			jMenuItemSpeichern.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_S,
 					Event.CTRL_MASK, true));
-			jMenuItemSpeichern.setIcon(new ImageIcon(StandardGui.class.getResource("/javax/swing/plaf/metal/icons/ocean/floppy.gif")));
+			ImageIcon iconSave = (ImageIcon) UIManager.getIcon("FileView.floppyDriveIcon");
+			// old jMenuItemSpeichern.setIcon(new ImageIcon(StandardGui.class.getResource("/javax/swing/plaf/metal/icons/ocean/floppy.gif")));
+			jMenuItemSpeichern.setIcon(iconSave);
 			jMenuItemSpeichern.setFont(new java.awt.Font("Dialog", java.awt.Font.PLAIN, 12));
 			jMenuItemSpeichern.setText("Speichern");
 			jMenuItemSpeichern.addActionListener(this);
@@ -797,7 +800,8 @@ public class StandardGui extends JFrame implements ActionListener,DocumentListen
 	private JButton getJButtonSave() {
 		if (jButtonSave == null) {
 			jButtonSave = new JButton();
-			jButtonSave.setIcon(new ImageIcon(StandardGui.class.getResource("/javax/swing/plaf/metal/icons/ocean/floppy.gif")));
+			ImageIcon iconSave = (ImageIcon) UIManager.getIcon("FileView.floppyDriveIcon");
+			jButtonSave.setIcon(iconSave);
 			jButtonSave.setToolTipText("Datei speichern");
 			jButtonSave.setText("");
 			jButtonSave.addActionListener(this);
